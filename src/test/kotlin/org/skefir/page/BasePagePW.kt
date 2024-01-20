@@ -23,9 +23,7 @@ open class BasePagePW<T : BasePagePW<T>>(val page: Page) {
      * Класс помошник где собраны элементы страницы, реализация через интерфейсы позволяет использовать блоки
      * компонентов переиспользуемые на сайте
      */
-    protected open inner class Elements : CommonUtils {
-
-    }
+    protected open inner class Elements : CommonUtils
 
     protected open var elementHelper = Elements()
 
@@ -38,7 +36,8 @@ open class BasePagePW<T : BasePagePW<T>>(val page: Page) {
         get() = this as T
 
     /**
-     * Проверка присутствует ли опция фильтра в наборе, сравнения происходит через заголовок или альтернативный заголовок опции
+     * Проверка присутствует ли опция фильтра в наборе, сравнения происходит через заголовок
+     * или альтернативный заголовок опции
      *
      * @param optionSet - набор опций фильтрации
      * @param labelOption - заголовок опции из ситемы

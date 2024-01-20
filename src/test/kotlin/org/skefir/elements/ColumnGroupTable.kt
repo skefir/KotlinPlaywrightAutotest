@@ -33,15 +33,17 @@ class ColumnGroupTable<E : DataTableColumn>(rootElement: Locator, classPrefix: S
                     ->
 
                     //TODO поменть
-                    (if(l.textContent().trim().startsWith(CalendarTableColumn.TIME.getTitle())) CalendarTableColumn.TIME.getTitle() else l.textContent().trim())   to i
+                    (if (l.textContent().trim().startsWith(CalendarTableColumn.TIME.getTitle()))
+                        CalendarTableColumn.TIME.getTitle() else l.textContent().trim()) to i
                 }.toMap()
-            columnsNumbers = columns.map { it to headerMap.getOrDefault(it.getTitle(), -1)}.toMap().toMutableMap()
+            columnsNumbers = columns.map { it to headerMap.getOrDefault(it.getTitle(), -1) }
+                .toMap().toMutableMap()
             initFlag.set(true)
         }
     }
 
     override fun getRowByNumber(rowNumber: Int): Locator {
-        return rootElement.locator("div.${classPrefix}__body div.${classPrefix}__item").nth(rowNumber-1)
+        return rootElement.locator("div.${classPrefix}__body div.${classPrefix}__item").nth(rowNumber - 1)
     }
 
     override fun getColumn(rowElement: Locator, column: E): Locator {

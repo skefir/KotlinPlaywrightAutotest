@@ -15,7 +15,7 @@ import java.util.*
 
 private val log = KotlinLogging.logger {}
 class CalendarListPage(page: Page) : BasePagePW<CalendarListPage>(page) {
-    protected inner class CalendarPageElements() : Elements(), CalendarListElements {
+    protected inner class CalendarPageElements : Elements(), CalendarListElements {
         override fun getPage(): Page {
             return page
         }

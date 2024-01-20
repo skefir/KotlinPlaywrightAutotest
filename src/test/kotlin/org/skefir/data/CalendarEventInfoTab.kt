@@ -7,4 +7,5 @@ enum class CalendarEventInfoTab(private val title: String) : ControlTabEntity {
     WIDGET("Widget");
 
     override fun getTitle(): String  = title
+
 }

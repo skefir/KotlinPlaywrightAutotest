@@ -19,7 +19,7 @@ private val log = KotlinLogging.logger {}
 class CalendarEventInfoPWPage(page: Page) : BasePagePW<CalendarEventInfoPWPage>(page) {
 
 
-    protected inner class CalendarEventInfoElements() : Elements(), CalendarEventInfoPWElements {
+    protected inner class CalendarEventInfoElements : Elements(), CalendarEventInfoPWElements {
         override fun getPage(): Page {
             return page
         }
@@ -94,7 +94,7 @@ class CalendarEventInfoPWPage(page: Page) : BasePagePW<CalendarEventInfoPWPage>(
             EventHistoryColumn.FORECAST, EventHistoryColumn.PREVIOUS
         )
         val header = "| ${EventHistoryColumn.DATE.getTitle().padEnd(25)}             | " +
-                "${EventHistoryColumn.ACTUAL.getTitle().padStart(20)}" +
+                 EventHistoryColumn.ACTUAL.getTitle().padStart(20) +
                 " | ${EventHistoryColumn.FORECAST.getTitle().padStart(20)} " +
                 "| ${EventHistoryColumn.PREVIOUS.getTitle().padStart(20)} |"
 
