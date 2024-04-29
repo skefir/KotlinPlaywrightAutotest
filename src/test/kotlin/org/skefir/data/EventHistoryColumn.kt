@@ -13,3 +13,4 @@ enum class EventHistoryColumn(private val title: String) : DataTableColumn {
         EventHistoryColumn.values().first { it.title == title }
 
 }
+

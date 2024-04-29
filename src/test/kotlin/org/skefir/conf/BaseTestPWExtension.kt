@@ -1,6 +1,5 @@
 package org.skefir.conf
 
-import io.qameta.allure.Step
 import org.junit.jupiter.api.extension.AfterEachCallback
 import org.junit.jupiter.api.extension.BeforeAllCallback
 import org.junit.jupiter.api.extension.BeforeEachCallback
@@ -12,17 +11,9 @@ class BaseTestPWExtension : BeforeAllCallback, BeforeEachCallback, AfterEachCall
 
 
     @Throws(Exception::class)
-    override fun beforeAll(context: ExtensionContext?) {
-
-    }
-
+    override fun beforeAll(context: ExtensionContext?) {}
     @Throws(Exception::class)
-    override fun afterEach(context: ExtensionContext?) {
-
-    }
-
+    override fun afterEach(context: ExtensionContext?) {}
     @Throws(Exception::class)
-    override fun beforeEach(context: ExtensionContext?) {
-
-    }
+    override fun beforeEach(context: ExtensionContext?) {}
 }

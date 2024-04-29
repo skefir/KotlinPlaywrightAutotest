@@ -27,3 +27,4 @@ enum class Currencies(private val currencyName: String) : OptionFilterable {
     override fun toString(): String = "$name-${getTitle()}(${getAltTitle()})"
 
 }
+

@@ -43,3 +43,4 @@ enum class DateFilterOptions(private val title: String, val beginPeriod: LocalDa
         return "$name -($beginPeriod, $finishPeriod)"
     }
 }
+
